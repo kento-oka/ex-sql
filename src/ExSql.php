@@ -103,8 +103,8 @@ class ExSql
     {
         return match (true) {
             isset($match[self::T_VAR]) => new VarToken(
-                var_name: $match[self::TKEY_VAR_NAME][0],
-                var_type: $match[self::TKEY_VAR_TYPE][0],
+                name: $match[self::TKEY_VAR_NAME][0],
+                type: $match[self::TKEY_VAR_TYPE][0],
                 offset: $match[0][1]
             ),
             isset($match[self::T_ELSE]) => new ElseToken(
