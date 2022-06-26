@@ -8,3 +8,8 @@ parameters:
         - tests
     level: max
     ignoreErrors:
+        - '#will always evaluate to (true|false)\.$#'
+        - '#Result of (\|\||&&) is always false\.#'
+        -
+            message: '#^Match expression does not handle remaining value: true$#'
+            path: src/ExSql.php
