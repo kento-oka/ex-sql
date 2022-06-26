@@ -119,8 +119,8 @@ class ExSql
             ),
             isset($match[self::T_FOR]) => new ForToken(
                 glue: $match[self::TKEY_FOR_GLUE][0] ?? null,
-                scope_name: $match[self::TKEY_FOR_SCOPE_NAME][0] ?? null,
-                var_name: $match[self::TKEY_FOR_VAR_NAME][0],
+                scope_var_name: $match[self::TKEY_FOR_SCOPE_NAME][0] ?? null,
+                iterate_var_name: $match[self::TKEY_FOR_VAR_NAME][0],
                 offset: $match[0][1]
             ),
             isset($match[self::T_ENDFOR]) => new EndForToken(
